@@ -129,7 +129,7 @@ const handleSocialSignup = async (providerName) => {
 };
 
   return (
-    <div className="min-h-screen bg-gray-200 flex justify-center items-center px-4">
+    <div className="min-h-screen bg-gray-200  px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 space-y-6">
         <h2 className="text-3xl font-bold text-center text-gray-800">Create Account</h2>
 

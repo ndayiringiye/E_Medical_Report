@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-export const refreshTokenService = async (token) => {
+const refreshTokenService = async (token) => {
     return new Promise((resolve, reject) => {
       jwt.verify(token, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
         if (err) return reject("Invalid token");
@@ -13,4 +13,5 @@ export const refreshTokenService = async (token) => {
       });
     });
   };
+  export default refreshTokenService;
   
