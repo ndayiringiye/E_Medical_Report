@@ -28,13 +28,25 @@ const userSchema = mongoose.Schema({
         unique: true,
         trim: true,
     },
+     phone: {
+        type: Number,
+        required: true,
+        unique: true,
+        trim: true,
+    },
+     image: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+    },
     verified: {
         type: Boolean,
         default: false,
     },
     role: {
         type: String, 
-        enum: ["patient", "doctor", "admin"],
+        enum: ["patient", "doctor", "admin", "pharmacist", "technician"],
         default: "patient"
     }
 }, { timestamps: true }); 
