@@ -1,17 +1,17 @@
 import express from "express";
 import {  getSingleUser, getUsers, logggout, signin, signupService } from "../services/userService.js";
-import {  refreshToken } from "../contrrollers/refreshToken.js";
+import  refreshToken  from "../services/refreshTokenService.js";
 import { createAdmin } from "../services/admin.js";
 import { isAdmin } from "../middleware/admin.js";
-import { verifyToken } from "../contrrollers/verifyToken.js";
+import { verifyToken } from "../controllers/verifyToken.js";
 import { createSymptomsCriteria, gettingSingleSymptoms } from "../services/symptoms.js";
 import { validateAge } from "../middleware/validateAge.js";
 import { getAllSymptoms } from "../services/dashboardService.js";
 import { deleteSymptomService } from "../services/deleteSymptom.js";
 import { getAllMessage, getSingleMessageService, getUnreadMessagesCount } from "../services/getSimgleMessage.js";
 import { handleVideoUpload, uploadMiddleware, } from "../services/uploadService.js";
-import { sendEmail } from "../contrrollers/sendMail.js";
-import { searchSymptom } from "../contrrollers/searchSymptoms.js";
+import { sendEmail } from "../controllers/sendMail.js";
+import { searchSymptom } from "../controllers/searchSymptoms.js";
 
 const router = express.Router();
 router.post("/signup", signupService);
